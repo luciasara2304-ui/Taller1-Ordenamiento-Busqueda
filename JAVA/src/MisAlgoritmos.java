@@ -1,6 +1,12 @@
 public class MisAlgoritmos implements Ordenamientos, Busquedas {
     @Override
     public int linearSearch(int[] arrayPorExplorar, int elementoABuscar) {
+
+        for (int i = 0; i < arrayPorExplorar.lenght; i++){
+            if(arrayPorExplorar[i] == elementoABuscar){
+                return i;
+            }
+        }
         return 0;
     }
 
