@@ -5,9 +5,8 @@ public class Main {
         int [] miArray = {70,12,19,45,11,33,26};
         MisAlgoritmos misAlgoritmos = new MisAlgoritmos();
 
+        int[] ordenado = misAlgoritmos.bubbleSort(miArray);
 
-
-        System.out.println(misAlgoritmos.binarySearch(miArray, 33));
-
+        System.out.println(java.util.Arrays.toString(ordenado));
         }
     }
