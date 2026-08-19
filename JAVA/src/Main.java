@@ -5,7 +5,9 @@ public class Main {
         int [] miArray = {70,12,19,45,11,33,26};
         MisAlgoritmos misAlgoritmos = new MisAlgoritmos();
 
-        System.out.println(misAlgoritmos.binarySearch(miArray, 19));
+
+
+        System.out.println(misAlgoritmos.binarySearch(miArray, 33));
 
         }
     }
