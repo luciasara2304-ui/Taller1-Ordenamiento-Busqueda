@@ -5,8 +5,10 @@ public class Main {
         int [] miArray = {70,12,19,45,11,33,26};
         MisAlgoritmos misAlgoritmos = new MisAlgoritmos();
 
-        int[] ordenado = misAlgoritmos.bubbleSort(miArray);
+                System.out.println("Lineal: " + misAlgoritmos.linearSearch(miArray, 45));
+                System.out.println("Ordenado: " + java.util.Arrays.toString(misAlgoritmos.bubbleSort(miArray)));
+                System.out.println("Binaria: " + misAlgoritmos.binarySearch(miArray, 45)); // miArray ya se ordenó arriba
+            }
 
-        System.out.println(java.util.Arrays.toString(ordenado));
         }
-    }
+
