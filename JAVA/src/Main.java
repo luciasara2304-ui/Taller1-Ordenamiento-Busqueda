@@ -10,8 +10,7 @@ public class Main {
                 System.out.println("Binaria: " + misAlgoritmos.binarySearch(miArray, 45)); // miArray ya se ordenó arriba
                 System.out.println("Ordenado por selectionSort: " + java.util.Arrays.toString(misAlgoritmos.selectionSort(miArray)));
                 System.out.println("Ordenado por insertionSort: " + java.util.Arrays.toString(misAlgoritmos.insertionSort(miArray)));
-
+                System.out.println("Ordenado por insertionSort: " + java.util.Arrays.toString(misAlgoritmos.mergeSort(miArray)));
             }
-
         }
 

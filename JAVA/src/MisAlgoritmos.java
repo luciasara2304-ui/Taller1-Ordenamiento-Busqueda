@@ -100,8 +100,45 @@ public class MisAlgoritmos implements Ordenamientos, Busquedas {
 
     @Override
     public int[] mergeSort(int[] arrayDesordenado) {
-        return new int[0];
+
+        if(arrayDesordenado == null || arrayDesordenado.length <= 1){
+            return arrayDesordenado;
+        }
+
+        int medio = arrayDesordenado.length /2;
+
+        int[] izquierda = new int[medio];
+        int[] derecha = new int[arrayDesordenado.length - medio];
+
+        System.arraycopy(arrayDesordenado, 0, izquierda,0,medio);
+        System.arraycopy(arrayDesordenado, medio, derecha, 0, arrayDesordenado.length - medio);
+
+        int[] izquierdaOrdenada = mergeSort(izquierda);
+        int[] derechaOrdenada = mergeSort(derecha);
+
+        return merge(izquierdaOrdenada, derechaOrdenada);
     }
+    private int[] merge(int[]izquierda, int[]derecha){
+        int[] resultado = new int[izquierda.length + derecha.length];
+        int i=0, j=0, k=0;
+
+        while (i< izquierda.length && j< derecha.length) {
+            if (izquierda[i] <= derecha[j]) {
+                resultado[k++] = izquierda[i++];
+            } else {
+                resultado[k++] = derecha[j++];
+            }
+        }
+        while(i < izquierda.length){
+            resultado[k++] = izquierda[i++];
+        }
+
+        while (j < derecha.length){
+            resultado[k++] = derecha[j++];
+        }
+        return resultado;
+    }
+
 
     @Override
     public int[] quickSort(int[] arrayDesordenado) {
