@@ -7,7 +7,7 @@ public class Main {
 
                 System.out.println("Lineal: " + misAlgoritmos.linearSearch(miArray, 45));
                 System.out.println("Ordenado por bubbleSort: " + java.util.Arrays.toString(misAlgoritmos.bubbleSort(miArray)));
-                System.out.println("Binaria: " + misAlgoritmos.binarySearch(miArray, 45)); // miArray ya se ordenó arriba
+                System.out.println("Binaria: " + misAlgoritmos.binarySearch(miArray, 70)); // miArray ya se ordenó arriba
                 System.out.println("Ordenado por selectionSort: " + java.util.Arrays.toString(misAlgoritmos.selectionSort(miArray)));
                 System.out.println("Ordenado por insertionSort: " + java.util.Arrays.toString(misAlgoritmos.insertionSort(miArray)));
                 System.out.println("Ordenado por mergeSort: " + java.util.Arrays.toString(misAlgoritmos.mergeSort(miArray)));
